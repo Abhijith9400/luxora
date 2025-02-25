@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import "../app/globals.css"; // Adjust if Tailwind isn't applying
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -19,9 +20,10 @@ export default function Contact() {
 
       {/* Hero Section with Video Background */}
       <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center">
-        <img 
+        <Image 
           src="/images/gallery.jpg" 
           alt="Background Image" 
+          width={500} height={300}
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
@@ -59,9 +61,10 @@ export default function Contact() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: Math.floor(index / 2) * 0.3 }}
               >
-                <img 
+                <Image 
                   src={image[0]} 
                   alt={`Event ${index + 1}`} 
+                  width={500} height={300}
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
                 />
               </motion.div>
@@ -75,7 +78,7 @@ export default function Contact() {
 <div className="w-full h-[1px] bg-black  top-0 mt-14"></div>
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           <div className="flex flex-col space-y-3 md:items-start items-center md:pl-40">
-            <img src="/images/logo.avif" alt="Select Event Group" className="w-20" />
+            <Image src="/images/logo.avif" width={500} height={300} alt="Select Event Group" className="w-20" />
             <p className="text-gray-600 text-sm md:text-left text-center">
               8610 Cherry Lane<br/>Laurel, Maryland 20707
             </p>
