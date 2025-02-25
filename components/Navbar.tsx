@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
 import Link from "next/link"; // Import Link from next/link
+import Image from "next/image";
 
 const Sidebar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Sidebar = () => {
     >
       {/* Logo */}
       <div className="mb-6">
-        <img src="/images/logo.avif" alt="logo" className="w-16 h-10 rounded-md" />
+        <Image src="/images/logo.avif" alt="logo" className="w-16 h-10 rounded-md" />
       </div>
 
       {/* Menu Button (Just for styling, no click needed) */}
