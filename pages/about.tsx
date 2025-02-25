@@ -59,7 +59,7 @@ export default function Contact() {
           {/* Left Text Section */}
           <div className="md:w-1/2 space-y-6 text-white">
             <h1 className="text-4xl md:text-7xl font-serif text-black leading-tight">
-              We’re not just a provider.<br /> We’re a partner.
+              We are not just a provider.<br /> We’re a partner.
             </h1>
             <p className="text-lg text-gray-600 ">
               At Luxora Event Group, we go beyond being service providers of tenting, 
