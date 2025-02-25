@@ -2,6 +2,7 @@ import Head from "next/head";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import Navbar from "@/components/Navbar";
 import "../app/globals.css"; // Adjust if Tailwind isn't applying
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -151,7 +152,7 @@ export default function Contact() {
       
      {/* Left Section - Logo & Address */}
 <div className="flex flex-col space-y-3 md:items-start items-center md:pl-40">
-  <img src="/images/logo.avif" alt="Select Event Group" className="w-20" />
+  <Image src="/images/logo.avif" width={500} height={300} alt="Select Event Group" className="w-20" />
   <p className="text-gray-600 text-sm md:text-left text-center">
     8610 Cherry Lane<br/>Laurel, Maryland 20707
   </p>
