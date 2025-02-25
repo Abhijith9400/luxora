@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import "../app/globals.css";
 import { FaArrowRight } from "react-icons/fa"; // Import the arrow icon
+import Image from "next/image";
 
 export default function Contact() {
   return (
@@ -16,9 +17,10 @@ export default function Contact() {
       {/* Hero Section with Video Background */}
       <section className="relative w-full h-[80vh] bg-sky-400 flex items-center overflow-hidden">
         {/* Image Background */}
-  <img
+  <Image
     src="/images/about.jpg"
     alt="Background"
+    width={500} height={300}
     className="absolute top-0 left-0 w-full h-full object-cover"
   />
   {/* Left Vertical Line (10cm from left end, spans top to bottom) */}
@@ -80,9 +82,10 @@ export default function Contact() {
 
           {/* Right Image Section */}
           <div className="md:w-1/2 flex justify-center md:justify-end">
-            <img
+            <Image
               src="/images/about.png"
               alt="Event Showcase"
+              width={500} height={300}
               className="w-full max-w-md md:max-w-lg h-auto object-cover"
             />
           </div>
@@ -122,7 +125,7 @@ export default function Contact() {
           
           {/* Left - Address & Social Links */}
           <div className="flex flex-col space-y-3 md:items-start items-center md:pl-40">
-            <img src="/images/logo.avif" alt="Company Logo" className="w-20" />
+            <Image src="/images/logo.avif" width={500} height={300} alt="Company Logo" className="w-20" />
             <p className="text-gray-600 text-center md:text-left">
               8610 Cherry Lane<br />Laurel, Maryland 20707
             </p>
