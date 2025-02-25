@@ -3,7 +3,6 @@ import { FaUsers, FaRegSquare, FaPencilAlt } from "react-icons/fa";
 import TestimonialSection from "@/components/TestimonialSection";
 import GallerySection from "@/components/GallerySection";
 import Navbar from "@/components/Navbar";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa"; // Import the arrow icon
 import EventCarousel from "@/components/EventCarousel";
 import FeatureSection from "@/components/FeatureSection";
@@ -11,30 +10,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
-  //for containers
-  const values = [
-    { 
-      icon: <FaUsers />, 
-      title: "Teamwork", 
-      text: <span className="text-gray-400 text-sm">We work together, communicate effectively,and cooperate.</span> 
-    },
-    { 
-      icon: <FaRegSquare />, 
-      title: "Transparency", 
-      text: <span className="text-gray-400 text-sm">We work with our clients and service providers transparently.</span> 
-    },
-    { 
-      icon: <FaPencilAlt />, 
-      title: "Excellence", 
-      text: <span className="text-gray-400 text-sm">At RADIANT, Excellence is the Culture.</span>, 
-      highlight: true 
-    },
-    { 
-      icon: <FaRegSquare />, 
-      title: "Commitment", 
-      text: <span className="text-gray-400 text-sm">We are dedicated to our values and the success of our clients.</span> 
-    }
-  ];
 
 
   return (
@@ -48,23 +23,6 @@ export default function Home() {
      
     <main className="relative overflow-hidden bg-white">
     <section className="relative w-full h-[100vh] bg-sky-400 overflow-hidden flex items-center">
-  
-  {/* Social Media Icons - Top Right */}
- 
-<div className="absolute top-10 right-10 flex space-x-4 text-white text-2xl">
-  <a href="#" className="hover:text-blue-600 transition">
-    <FaFacebookF />
-  </a>
-  <a href="#" className="hover:text-pink-600 transition">
-    <FaInstagram />
-  </a>
-  <a href="#" className="hover:text-blue-400 transition">
-    <FaTwitter />
-  </a>
-  <a href="#" className="hover:text-red-600 transition">
-    <FaYoutube />
-  </a>
-</div>
 
   {/* Image Background */}
   <Image
