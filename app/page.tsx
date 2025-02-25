@@ -1,10 +1,4 @@
 "use client"; // Ensures the file is treated as a Client Component
-<<<<<<< HEAD
-import { motion } from "framer-motion";
-import StatCard from "@/components/statcard"; // Adjust path if needed
-import { FaBriefcase, FaHome, FaHardHat, FaVideo } from "react-icons/fa"; // Import icons
-=======
->>>>>>> b33ee47 (Your commit message)
 import { FaUsers, FaRegSquare, FaPencilAlt } from "react-icons/fa";
 import TestimonialSection from "@/components/TestimonialSection";
 import GallerySection from "@/components/GallerySection";
@@ -14,13 +8,9 @@ import { FaArrowRight } from "react-icons/fa"; // Import the arrow icon
 import EventCarousel from "@/components/EventCarousel";
 import FeatureSection from "@/components/FeatureSection";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
-<<<<<<< HEAD
- 
-
-=======
->>>>>>> b33ee47 (Your commit message)
   //for containers
   const values = [
     { 
@@ -45,14 +35,8 @@ export default function Home() {
       text: <span className="text-gray-400 text-sm">We are dedicated to our values and the success of our clients.</span> 
     }
   ];
-<<<<<<< HEAD
-  
-  // Close dropdown when clicking outside
- 
-=======
 
 
->>>>>>> b33ee47 (Your commit message)
   return (
     
     <div className="relative min-h-screen bg-white text-white">
@@ -83,9 +67,10 @@ export default function Home() {
 </div>
 
   {/* Image Background */}
-  <img
+  <Image
     src="/images/hero.jpg"
     alt="Background"
+    width={500} height={300}
     className="absolute top-0 left-0 w-full h-full object-cover"
   />
   
@@ -193,21 +178,22 @@ Transforming events, redefining excellence, setting new ideas
     <div className="container mx-auto mt-6 px-6">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-1 justify-center">
     {[
-      { title: "Tenting & Structures", img: "/images/ga1.jpg" },
-      { title: "Flooring & Seating", img: "/images/ga2.jpg" },
-      { title: "3D Rendering, Branding, Wayfinding, & Printing", img: "/images/ga3.jpg" },
-      { title: "VIP Hospitality & Ticketing Booths", img: "/images/ga4.jpg" },
-      { title: "Furniture & Interior Buildouts", img: "/images/we.jpg" },
-      { title: "Emergency Response / Semi-Permanent Solutions", img: "/images/ga1.jpg" },
+      { title: "Tenting & Structures", Image: "/images/ga1.jpg" },
+      { title: "Flooring & Seating", Image: "/images/ga2.jpg" },
+      { title: "3D Rendering, Branding, Wayfinding, & Printing", Image: "/images/ga3.jpg" },
+      { title: "VIP Hospitality & Ticketing Booths", Image: "/images/ga4.jpg" },
+      { title: "Furniture & Interior Buildouts", Image: "/images/we.jpg" },
+      { title: "Emergency Response / Semi-Permanent Solutions", Image: "/images/ga1.jpg" },
     ].map((service, index) => (
       <div
         key={index}
         className="relative max-w-xs w-[98%] mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
       >
         {/* Image */}
-        <img
-          src={service.img}
+        <Image
+          src={service.Image}
           alt={service.title}
+          width={500} height={300}
           className="w-full h-56 object-cover"
         />
 
@@ -251,7 +237,7 @@ Transforming events, redefining excellence, setting new ideas
       
      {/* Left Section - Logo & Address */}
 <div className="flex flex-col space-y-3 md:items-start items-center md:pl-40">
-  <img src="/images/logo.avif" alt="Select Event Group" className="w-20" />
+  <Image src="/images/logo.avif" alt="Select Event Group" width={500} height={300} className="w-20" />
   <p className="text-gray-600 text-sm md:text-left text-center">
     8610 Cherry Lane<br/>Laurel, Maryland 20707
   </p>
@@ -299,6 +285,3 @@ Transforming events, redefining excellence, setting new ideas
   
   );
 }
-
-
-
