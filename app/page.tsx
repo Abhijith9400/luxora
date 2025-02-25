@@ -1,5 +1,4 @@
 "use client"; // Ensures the file is treated as a Client Component
-import { FaUsers, FaRegSquare, FaPencilAlt } from "react-icons/fa";
 import TestimonialSection from "@/components/TestimonialSection";
 import GallerySection from "@/components/GallerySection";
 import Navbar from "@/components/Navbar";
