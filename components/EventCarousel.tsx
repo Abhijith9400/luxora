@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const events = [
@@ -108,9 +109,10 @@ export default function EventCarousel() {
             {events.map((event, index) => (
               <SwiperSlide key={index} className="flex justify-center">
                 <div className="max-w-[500px] bg-white shadow-lg rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src={event.image}
                     alt={event.title}
+                    width={500} height={300}
                     className="w-full h-[280px] object-cover"
                   />
                   <div className="p-6">
