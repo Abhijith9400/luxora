@@ -5,6 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const events = [
@@ -37,14 +38,15 @@ const events = [
 export default function EventCarousel() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      const swiperInstance = swiperRef.current.swiper;
-
-      // Ensure navigation is enabled before modifying it
-      if (swiperInstance.params.navigation && typeof swiperInstance.params.navigation !== "boolean") {
+    if (swiperRef.current) {
+      const swiperInstance = swiperRef.current;
+      if (
+        swiperInstance.params.navigation &&
+        typeof swiperInstance.params.navigation !== "boolean"
+      ) {
         swiperInstance.params.navigation.prevEl = prevRef.current;
         swiperInstance.params.navigation.nextEl = nextRef.current;
         swiperInstance.navigation.init();
@@ -55,13 +57,9 @@ export default function EventCarousel() {
 
   return (
     <div className="min-h-screen w-full bg-white flex flex-col justify-center items-center px-6 py-12">
-      {/* Content Container */}
       <div className="relative z-10 w-[90%] max-w-6xl">
-        {/* Title & Navigation Buttons */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-4xl font-serif text-black">Our Variant Events</h2>
-
-          {/* Navigation Buttons */}
           <div className="flex items-center gap-2">
             <button
               ref={prevRef}
@@ -77,11 +75,9 @@ export default function EventCarousel() {
             </button>
           </div>
         </div>
-
-        {/* Swiper Carousel */}
         <div className="w-full">
           <Swiper
-            ref={swiperRef}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             modules={[Navigation]}
             spaceBetween={20}
             slidesPerView={1}
@@ -89,22 +85,7 @@ export default function EventCarousel() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            navigation={true} // Enable navigation
-            onSwiper={(swiper) => {
-              setTimeout(() => {
-                if (
-                  prevRef.current &&
-                  nextRef.current &&
-                  swiper.params.navigation &&
-                  typeof swiper.params.navigation !== "boolean"
-                ) {
-                  swiper.params.navigation.prevEl = prevRef.current;
-                  swiper.params.navigation.nextEl = nextRef.current;
-                  swiper.navigation.init();
-                  swiper.navigation.update();
-                }
-              });
-            }}
+            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
           >
             {events.map((event, index) => (
               <SwiperSlide key={index} className="flex justify-center">
@@ -112,7 +93,8 @@ export default function EventCarousel() {
                   <Image
                     src={event.image}
                     alt={event.title}
-                    width={500} height={300}
+                    width={500}
+                    height={300}
                     className="w-full h-[280px] object-cover"
                   />
                   <div className="p-6">
