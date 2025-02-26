@@ -24,7 +24,7 @@ const Sidebar = () => {
 
       {/* Navigation Menu (Opens on Hover) */}
       <nav
-        className={`absolute left-0 top-0 h-full w-40  bg-white shadow-lg transition-transform duration-300 ${
+        className={`absolute left-0 top-0 h-full w-60  bg-white shadow-lg transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
