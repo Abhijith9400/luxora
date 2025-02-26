@@ -98,7 +98,7 @@ export default function Contact() {
             Our mission at <strong>Luxora Event Management</strong> is to provide professional event planning and management services across Kerala, from Kasaragod to Trivandrum. We focus on delivering professional events tailored to the Malayali community and outsiders organizing events in Kerala.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Our mission also includes catering to rural areas, villages, and small towns, blending creativity and cultural relevance to create unforgettable experiences. Whether it's a wedding, corporate event, or private gathering, we aim to exceed expectations and make each event stress-free.
+            Our mission also includes catering to rural areas, villages, and small towns, blending creativity and cultural relevance to create unforgettable experiences. Whether its a wedding, corporate event, or private gathering, we aim to exceed expectations and make each event stress-free.
           </p>
           {/* Horizontal Line Further Below the Text */}
 <div className="w-full h-[1px] bg-black  top-0 mt-14"></div>
