@@ -59,7 +59,7 @@ export default function Contact() {
           {/* Left Text Section */}
           <div className="md:w-1/2 space-y-6 text-white">
             <h1 className="text-4xl md:text-7xl font-serif text-black leading-tight">
-              We are not just a provider.<br /> We’re a partner.
+              We’re not just a provider.<br /> We’re a partner.
             </h1>
             <p className="text-lg text-gray-600 ">
               At Luxora Event Group, we go beyond being service providers of tenting, 
@@ -98,7 +98,7 @@ export default function Contact() {
             Our mission at <strong>Luxora Event Management</strong> is to provide professional event planning and management services across Kerala, from Kasaragod to Trivandrum. We focus on delivering professional events tailored to the Malayali community and outsiders organizing events in Kerala.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            Our mission also includes catering to rural areas, villages, and small towns, blending creativity and cultural relevance to create unforgettable experiences. Whether is a wedding, corporate event, or private gathering, we aim to exceed expectations and make each event stress-free.
+            Our mission also includes catering to rural areas, villages, and small towns, blending creativity and cultural relevance to create unforgettable experiences. Whether it's a wedding, corporate event, or private gathering, we aim to exceed expectations and make each event stress-free.
           </p>
           {/* Horizontal Line Further Below the Text */}
 <div className="w-full h-[1px] bg-black  top-0 mt-14"></div>
@@ -140,14 +140,14 @@ export default function Contact() {
           {/* Center - Quick Links */}
           <div className="flex flex-col space-y-2 text-center">
             <h3 className="text-lg font-bold">Quick Links</h3>
-            {["CATALOG", "CAREERS", "CONTACT US", "PRIVACY POLICY"].map((link) => (
-              <a key={link} href="#" className="text-cyan-600 italic">{link}</a>
+            {["catalog", "careers", "contact us", "privacy policy"].map((link) => (
+              <a key={link} href="#" className="text-gray-800">{link}</a>
             ))}
           </div>
 
           {/* Right - Newsletter Signup */}
           <div className="flex flex-col space-y-3 md:items-end items-center">
-            <h3 className="font-semibold text-lg italic">Sign up for News and Specials</h3>
+            <h3 className="font-semibold ">Sign up for News and Specials</h3>
             <div className="flex w-full md:w-auto">
               <input type="email" placeholder="Your Email Address" className="border px-4 py-2 rounded-l-md focus:outline-none w-full" />
               <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md">SIGN UP</button>
