@@ -9,237 +9,174 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Home() {
-  //for containers
- 
   return (
-    
     <div className="relative min-h-screen bg-white text-white">
-      
       {/* Navbar */}
-    <section>
-         <Navbar />
-    </section>
-     
-    <main className="relative overflow-hidden bg-white">
-    <section className="relative w-full h-[100vh] bg-black overflow-hidden flex items-center">
-  
+      <Navbar />
 
-  {/* Image Background */}
-  <Image
-    src="/images/hero.jpg"
-    alt="Background"
-    width={500} height={300}
-    className="absolute top-0 left-0 w-full h-full object-cover"
-  />
-  
-  {/* Left Vertical Line (10cm from left end, spans top to bottom) */}
-  <div className="absolute top-20 bottom-20 left-[100px] w-[1px] bg-white"></div>
+      {/* Hero Section */}
+      <main className="relative bg-white">
+        <section className="relative w-full h-screen bg-sky-400 flex flex-col items-center justify-center text-center sm:text-left sm:flex-row sm:justify-between px-6 sm:px-12 lg:px-16">
+          {/* Background Image */}
+          <Image
+            src="/images/hero.jpg"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="absolute top-0 left-0 w-full h-full z-0"
+          />
 
-  {/* Right Vertical Line (10cm from right end, spans top to bottom) */}
-  <div className="absolute top-20 bottom-20 right-[100px] w-[1px] bg-white"></div>
+          {/* Vertical Lines */}
+          <div className="absolute top-20 bottom-20 left-[10vw] w-[1px] bg-white hidden md:block"></div>
+          <div className="absolute top-20 bottom-20 right-[10vw] w-[1px] bg-white hidden md:block"></div>
 
-  {/* Content Section */}
-  <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between px-10 md:px-20">
-    
-    {/* Left Text Section */}
-    <div className="md:w-1/2 w-full text-white space-y-6 md:pl-20 flex flex-col">
-    <motion.h1
-      className="text-7xl font-serif uppercase leading-tight"
-      initial={{ opacity: 0, x: -100 }} // Start position (invisible, moved left)
-      animate={{ opacity: 1, x: 0 }} // End position (fully visible)
-      transition={{ duration: 2, ease: "easeOut" }} // Smooth transition
-    >
-      <span className="text-white-950"> Luxora Events,<br/></span> Team You Can Trust™
-    </motion.h1>
-  
+          {/* Content Section */}
+          <div className="relative z-10 w-full flex flex-col items-center sm:items-start sm:w-1/2 space-y-6 sm:pl-16 md:pl-20">
+            <motion.h1
+              className="text-3xl sm:text-5xl md:text-7xl font-serif uppercase leading-tight"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 20 }} // Moves text slightly to the right
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+              <span className="text-white"> Luxora Events,</span> <br />
+              Team You Can Trust™
+            </motion.h1>
 
-      {/* Right Text Section at the Bottom */}
-      <motion.div
-      className="absolute bottom-10 right-40 text-sm text-gray-300 text-right max-w-xs"
-      initial={{ opacity: 0, x: 100 }} // Start position (invisible, moved right)
-      animate={{ opacity: 1, x: 0 }} // End position (fully visible)
-      transition={{ duration: 2, ease: "easeOut" }} // Smooth transition
-    >
-      <p>
-        We specialize in crafting unforgettable experiences with precision, passion, and creativity. 
-        Let’s make your event extraordinary.
-      </p>
-    </motion.div>
-  
-      <div className="w-20 h-1 bg-white"></div>
+            {/* Button */}
+            <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110">
+              <FaArrowRight />
+            </button>
+          </div>
 
-      {/* Button Section */}
-      <div className="mt-6">
-      <button className=" font-serif">
-  {/* Circle with Arrow */}
-  <div className="w-10 h-10 flex items-center justify-center bg-white text-teal-950 rounded-full transition-all duration-300 transform hover:scale-110">
-    <FaArrowRight />
-  </div>
-</button>
-      </div>
-    </div>
-  </div>
+          {/* Right Text Section */}
+          <motion.div
+            className="absolute bottom-6 sm:bottom-10 right-6 sm:right-16 md:right-40 text-xs sm:text-sm text-gray-300 max-w-xs text-center sm:text-right"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2, ease: "easeOut" }}
+          >
+            <p>
+              We specialize in crafting unforgettable experiences with precision, passion, and creativity.
+              Let’s make your event extraordinary.
+            </p>
+          </motion.div>
+        </section>
+      </main>
 
-</section>    
-</main>
-
-<section
-  className="relative flex flex-col items-center justify-center py-16 px-6 md:px-16 bg-cyan-100 bg-cover bg-center"
-  style={{ backgroundImage: "url('/images/hdbg.png')" }} // Replace with the actual image path
->
-
-<h2 className="relative text-7xl font-serif text-black leading-tight mb-6  mt-12">
-  Elevating experiences, setting new standards.
-</h2>
-
-{/* Horizontal Line Further Below the Text */}
-<div className="w-full h-[1px] bg-black  top-0 mt-12"></div>
-
-  <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-    {/* Left Section */}
-   
-   
-  </div>
-  <main className="bg-gray-100 min-h-screen ">
-      <EventCarousel />
-      
-{/* Horizontal Line Further Below the Text */}
-<div className="w-full h-[1px] bg-black  top-0 left-20 right-20 "></div>
-    </main>
-
-</section>
-       
-<section 
-  className="w-full py-24 text-white text-center relative bg-cyan-100 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('/images/hdbg.png')" }} // Replace with actual image path
->
-<h2 className="relative text-7xl font-serif text-black leading-tight mb-6 text-left left-20 mt-12">
-Transforming events, redefining excellence, setting new ideas
-</h2>
- 
-{/* Horizontal Line Further Below the Text */}
-<div className="w-[80%] h-[1px] bg-black mx-auto mt-12"></div>
-<main>
-      <FeatureSection />
-    </main>
-
-  {/* services */}
-  <div className="relative z-10">
-    <h2 className="text-7xl  text-black mb-8 font-serif">Our Services</h2>
-    <p className="text-lg text-gray-500 max-w-4xl mx-auto italic">
-      We are a team of cross-disciplinary event experts from infrastructure, entertainment,
-      sports, and hospitality industries! We support our clients beyond the physical structures we build,
-      helping them focus on what they do best. At Select, we’re <span className="font-semibold">The Team Your Team Can Trust™.</span>
-    </p>
-
-    {/* Services Grid */}
-    <div className="container mx-auto mt-6 px-6">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-1 justify-center">
-    {[
-      { title: "Tenting & Structures", Image: "/images/ga1.jpg" },
-      { title: "Flooring & Seating", Image: "/images/ga2.jpg" },
-      { title: "3D Rendering, Branding, Wayfinding, & Printing", Image: "/images/ga3.jpg" },
-      { title: "VIP Hospitality & Ticketing Booths", Image: "/images/ga4.jpg" },
-      { title: "Furniture & Interior Buildouts", Image: "/images/we.jpg" },
-      { title: "Emergency Response / Semi-Permanent Solutions", Image: "/images/ga1.jpg" },
-    ].map((service, index) => (
-      <div
-        key={index}
-        className="relative max-w-xs w-[98%] mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
+      {/* Second Section */}
+      <section
+        className="relative flex flex-col items-center justify-center py-16 px-4 sm:px-12 lg:px-16 bg-cyan-100 bg-cover bg-center text-center"
+        style={{ backgroundImage: "url('/images/hdbg.png')" }}
       >
-        {/* Image */}
-        <Image
-          src={service.Image}
-          alt={service.title}
-          width={500} height={300}
-          className="w-full h-56 object-cover"
-        />
+        <h2 className="text-2xl sm:text-4xl md:text-6xl font-serif text-black leading-tight mb-6">
+          Elevating experiences, setting new standards.
+        </h2>
 
-        {/* Overlay for Readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        {/* Horizontal Line */}
+        <div className="w-full h-[1px] bg-black mt-8"></div>
 
-        {/* Text Section */}
-        <div className="absolute bottom-0 w-full bg-black bg-opacity-60 p-4 text-center">
-          <h3 className="text-lg font-bold text-white">{service.title}</h3>
+        {/* Event Carousel */}
+        <EventCarousel />
+
+        {/* Another Horizontal Line */}
+        <div className="w-full h-[1px] bg-black mt-8"></div>
+      </section>
+
+      {/* Feature Section */}
+      <section
+        className="w-full py-16 sm:py-24 text-center relative bg-cyan-100 bg-cover bg-center bg-no-repeat px-4 sm:px-12 lg:px-20"
+        style={{ backgroundImage: "url('/images/hdbg.png')" }}
+      >
+        <h2 className="relative text-2xl sm:text-5xl md:text-7xl font-serif text-black leading-tight mb-6 text-left sm:left-10 md:left-20 mt-6 sm:mt-12">
+          Transforming events, redefining excellence, setting new ideas
+        </h2>
+        <div className="w-[90%] sm:w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
+        <main>
+          <FeatureSection />
+        </main>
+      </section>
+    
+      <div className="relative z-10 px-4 md:px-20">
+        <h2 className="text-3xl md:text-7xl text-black mb-8 font-serif text-center">Our Services</h2>
+        <p className="text-lg text-gray-500 max-w-4xl mx-auto italic text-center">
+          We are a team of cross-disciplinary event experts from infrastructure, entertainment, sports, and hospitality industries!
+        </p>
+
+        <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-4 px-4 md:px-0">
+          {[
+            { title: "Tenting & Structures", Image: "/images/ga1.jpg" },
+            { title: "Flooring & Seating", Image: "/images/ga2.jpg" },
+            { title: "3D Rendering, Branding, Wayfinding, & Printing", Image: "/images/ga3.jpg" },
+            { title: "VIP Hospitality & Ticketing Booths", Image: "/images/ga4.jpg" },
+            { title: "Furniture & Interior Buildouts", Image: "/images/we.jpg" },
+            { title: "Emergency Response / Semi-Permanent Solutions", Image: "/images/ga1.jpg" },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="relative max-w-xs w-full mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
+            >
+              <Image
+                src={service.Image}
+                alt={service.title}
+                width={500}
+                height={300}
+                className="w-full h-56 object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              <div className="absolute bottom-0 w-full bg-black bg-opacity-60 p-4 text-center">
+                <h3 className="text-lg font-bold text-white">{service.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
 
-
-
-    </div>
-  </div>
-</section>
-
-
-     {/* Add TestimonialSection as a session here */}
-     <div className="event-sections py-16 bg-white">
-      {/* Horizontal Line Further Below the Text */}
-<div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
-         <TestimonialSection/>
-         {/* Horizontal Line Further Below the Text */}
-<div className="w-[80%] h-[2px] bg-black mx-auto mt-16"></div>
+      <div className="event-sections py-16 bg-white">
+        <div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
+        <TestimonialSection />
+        <div className="w-[80%] h-[2px] bg-black mx-auto mt-16"></div>
       </div>
 
-     {/* Add TestimonialSection as a session here */}
-     <div className="event-sections py-16 bg-white">
-         <GallerySection/>
+      <div className="event-sections py-16 bg-white">
+        <GallerySection />
       </div>
 
       <div id="contact">
-        {/* Horizontal Line Further Below the Text */}
-<div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
-  <footer className="bg-white text-black py-10">
-    <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-      
-     {/* Left Section - Logo & Address */}
-<div className="flex flex-col space-y-3 md:items-start items-center md:pl-40">
-  <Image src="/images/logo.avif" alt="Select Event Group" width={500} height={300} className="w-20" />
-  <p className="text-gray-600 text-sm md:text-left text-center">
-    8610 Cherry Lane<br/>Laurel, Maryland 20707
-  </p>
-  <p className="text-gray-600">(301) 604-2334</p>
-  <div className="flex space-x-4 text-blue-600 text-xl">
-    <a href="#"><i className="fab fa-facebook"></i></a>
-    <a href="#"><i className="fab fa-instagram"></i></a>
-    <a href="#"><i className="fab fa-twitter"></i></a>
-  </div>
-</div>
+        <div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
+        <footer className="bg-white text-black py-10 px-4 md:px-20">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center md:text-left">
+            <div className="flex flex-col space-y-3 items-center md:items-start">
+              <Image src="/images/logo.avif" alt="Select Event Group" width={80} height={80} />
+              <p className="text-gray-600 text-sm">8610 Cherry Lane, Laurel, Maryland 20707</p>
+              <p className="text-gray-600">(301) 604-2334</p>
+              <div className="flex space-x-4 text-blue-600 text-xl">
+                <a href="#"><i className="fab fa-facebook"></i></a>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+              </div>
+            </div>
 
+            <div className="flex flex-col space-y-2">
+              <h3 className="text-lg font-bold">Quick Links</h3>
+              {['Catalog', 'Careers', 'Contact Us', 'Privacy Policy'].map((link, idx) => (
+                <a key={idx} href="#" className="text-gray-800">{link}</a>
+              ))}
+            </div>
 
-      {/* Center Section - Quick Links */}
-      <div className="flex flex-col space-y-2 text-center">
-        <h3 className="text-lg font-bold">Quick Links</h3>
-        <a href="#" className="text-gray-800 ">catalog</a>
-        <a href="#" className="text-gray-800 ">careers</a>
-        <a href="#" className="text-gray-800 ">contact us</a>
-        <a href="#" className="text-gray-800 ">privacy policy</a>
+            <div className="flex flex-col space-y-3 items-center md:items-end">
+              <h3 className="font-semibold">Sign up for News and Specials</h3>
+              <div className="flex w-full md:w-auto">
+                <input type="email" placeholder="Your Email Address" className="border px-4 py-2 rounded-l-md focus:outline-none w-full" />
+                <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md">SIGN UP</button>
+              </div>
+            </div>
+          </div>
+          <div className="text-center text-gray-500 text-sm mt-8">
+            &copy; Select Event Group. All Rights Reserved.
+          </div>
+        </footer>
       </div>
-
-      {/* Right Section - Newsletter Signup */}
-<div className="flex flex-col space-y-3 md:items-end items-center md:pr-20">
-  <h3 className="font-semibold ">Sign up for News and Specials</h3>
-  <div className="flex w-full md:w-auto">
-    <input 
-      type="email" 
-      placeholder="Your Email Address" 
-      className="w-full border border-gray-400 px-4 py-2 rounded-l-md focus:outline-none"
-    />
-    <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md">SIGN UP</button>
-  </div>
-  </div>
-
-
-    </div>
-
-    {/* Copyright Section */}
-    <div className="text-center text-gray-500 text-sm mt-8">
-      Copyright © Select Event Group. All Rights Reserved.
-    </div>
-  </footer>
-  </div>
-</div>
+      </div>
   
   );
 }
