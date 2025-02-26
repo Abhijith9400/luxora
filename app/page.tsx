@@ -43,10 +43,9 @@ export default function Home() {
             </motion.h1>
 
             {/* Button */}
-            <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110">
-              <FaArrowRight />
-            </button>
-          </div>
+            <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110 ml-4 sm:ml-6">
+            <FaArrowRight />
+           </button>
 
           {/* Right Text Section */}
           <motion.div
