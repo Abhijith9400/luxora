@@ -90,14 +90,14 @@ export default function Contact() {
             </div>
           </div>
           <div className="flex flex-col space-y-2 text-center">
-            <h3 className="text-lg font-bold">Quick Links</h3>
-            <a href="#" className="text-cyan-600 text-italic">CATALOG</a>
-            <a href="#" className="text-cyan-600 text-italic">CAREERS</a>
-            <a href="#" className="text-cyan-600 text-italic">CONTACT US</a>
-            <a href="#" className="text-cyan-600 text-italic">PRIVACY POLICY</a>
-          </div>
+        <h3 className="text-lg font-bold">Quick Links</h3>
+        <a href="#" className="text-gray-800 ">catalog</a>
+        <a href="#" className="text-gray-800 ">careers</a>
+        <a href="#" className="text-gray-800 ">contact us</a>
+        <a href="#" className="text-gray-800 ">privacy policy</a>
+      </div>
           <div className="flex flex-col space-y-3 md:items-end items-center md:pr-20">
-            <h3 className="font-semibold text-lg italic">Sign up for News and Specials</h3>
+            <h3 className="font-semibold ">Sign up for News and Specials</h3>
             <div className="flex w-full md:w-auto">
               <input type="email" placeholder="Your Email Address" className="w-full border border-gray-400 px-4 py-2 rounded-l-md focus:outline-none" />
               <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md">SIGN UP</button>
