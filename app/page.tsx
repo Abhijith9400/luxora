@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <main className="relative bg-white">
-        <section className="relative w-full h-screen bg-sky-400 flex flex-col items-center justify-center text-center sm:text-left sm:flex-row sm:justify-between px-6 sm:px-12 lg:px-16">
+        <section className="relative w-full h-screen bg-black flex flex-col items-center justify-center text-center sm:text-left sm:flex-row sm:justify-between px-6 sm:px-12 lg:px-16">
           {/* Background Image */}
           <Image
             src="/images/hero.jpg"
