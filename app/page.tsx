@@ -21,7 +21,7 @@ export default function Home() {
     </section>
      
     <main className="relative overflow-hidden bg-white">
-    <section className="relative w-full h-[100vh] bg-sky-400 overflow-hidden flex items-center">
+    <section className="relative w-full h-[100vh] bg-black overflow-hidden flex items-center">
   
 
   {/* Image Background */}
