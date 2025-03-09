@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import EventCarousel from "@/components/EventCarousel";
 import FeatureSection from "@/components/FeatureSection";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
@@ -44,9 +45,12 @@ export default function Home() {
             </motion.h1>
 
             {/* Button */}
-             <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110 ml-4 sm:ml-6">
-            <FaArrowRight />
-           </button>
+            <Link href="/packages">
+  <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110 ml-4 sm:ml-6">
+    <FaArrowRight />
+  </button>
+</Link>
+
 
           </div>
 
