@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "sans-serif"], // ✅ Add DM Sans
+        sans: ["'Montserrat Alternates'", "sans-serif" ], // ✅ Add DM Sans
       },
     },
   },
