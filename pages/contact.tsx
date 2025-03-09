@@ -26,9 +26,9 @@ export default function Contact() {
 
         {/* Content Wrapper */}
         <div className="relative z-10 text-center text-white max-w-5xl">
-          <h1 className="text-5xl text-black md:text-6xl font-extrabold">
+          <h1 className="text-5xl text-sky-800 md:text-6xl font-extrabold">
             Everything is designed, <br />
-            But some <span className="text-yellow-400">things are designed Well.</span>
+            But some <span className="text-amber-800">things are designed Well.</span>
           </h1>
           <p className="text-lg text-gray-500 mt-3">
             We help people build beautifully designed functions.
@@ -43,7 +43,7 @@ export default function Contact() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto py-12 px-6">
         {/* Email */}
         <div className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-gray-900">
-          <FaEnvelope className="text-3xl text-yellow-500 mb-3" />
+          <FaEnvelope className="text-3xl text-amber-800 mb-3" />
           <h3 className="text-2xl font-semibold">Email</h3>
           <p className="text-gray-700 mt-2 text-center">
           Sales@luxoraevents.in
@@ -52,7 +52,7 @@ export default function Contact() {
 
         {/* Phone */}
         <div className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-gray-900">
-          <FaPhoneAlt className="text-3xl text-yellow-500 mb-3" />
+          <FaPhoneAlt className="text-3xl text-amber-800 mb-3" />
           <h3 className="text-2xl font-semibold">Phone</h3>
           <p className="text-gray-700 mt-2">+91735268844</p>
           <p className="text-gray-700">+91 9736476481</p>
@@ -61,7 +61,7 @@ export default function Contact() {
 
         {/* Location */}
         <div className="bg-white shadow-lg rounded-xl p-6 flex flex-col items-center text-gray-900">
-          <FaMapMarkerAlt className="text-3xl text-yellow-500 mb-3" />
+          <FaMapMarkerAlt className="text-3xl text-amber-800 mb-3" />
           <h3 className="text-2xl font-semibold">Location</h3>
           <p className="text-gray-700 mt-2 text-center">
           United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
@@ -70,7 +70,7 @@ export default function Contact() {
             href="https://maps.app.goo.gl/yvuk3gorn8s3HSS27 " // Replace with actual link
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 px-5 py-2 bg-cyan-700 text-white rounded-lg shadow-md hover:bg-cyan-900 transition"
+            className="mt-4 px-5 py-2 bg-sky-800 text-white rounded-lg shadow-md hover:bg-cyan-900 transition"
           >
             View on Google Maps
           </a>
@@ -78,7 +78,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="max-w-3xl mx-auto p-8 bg-cyan-800 rounded-lg shadow-md mb-12">
+      <div className="max-w-3xl mx-auto p-8 bg-sky-800 rounded-lg shadow-md mb-12">
         <form className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Name */}
@@ -138,7 +138,7 @@ export default function Contact() {
           <div className="text-right">
             <button
               type="submit"
-              className="bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+              className="bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
             >
               Get A Quote
             </button>
@@ -155,7 +155,7 @@ export default function Contact() {
                  United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
                  </p>
                  <p className="text-gray-600">+91-0000000000</p>
-                 <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
+                 <div className="flex justify-center md:justify-start space-x-4 text-sky-600 text-xl">
                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>

@@ -7,12 +7,13 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { motion } from "framer-motion"; // Import Framer Motion
 
 const events = [
   {
     title: "Camping Embrace Nature",
     description:
-      "Nexus Events' camping excursions offer an immersive escape into the heart of nature, where adventure awaits at every turn.",
+      "Luxora Events' camping excursions offer an immersive escape into the heart of nature, where adventure awaits at every turn.",
     image: "/images/bb1.jpg",
   },
   {
@@ -56,25 +57,49 @@ export default function EventCarousel() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-white flex flex-col justify-center items-center px-6 py-12">
-      <div className="relative z-10 w-[90%] max-w-6xl">
+    <motion.div
+      className="min-h-screen w-full bg-white flex flex-col justify-center items-center px-6 py-12"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }} // Ensures the animation runs only once
+    >
+      <motion.div 
+        className="relative z-10 w-[90%] max-w-6xl"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-4xl font-serif text-black">Our Variant Events</h2>
+          <motion.h2 
+            className="text-4xl font-serif text-black"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            Our Variant Events
+          </motion.h2>
           <div className="flex items-center gap-2">
-            <button
+            <motion.button
               ref={prevRef}
-              className="bg-black p-3 rounded-full shadow-md hover:bg-gray-700 text-white transition"
+              className="bg-sky-800 p-3 rounded-full shadow-md hover:bg-gray-700 text-white transition"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaArrowLeft />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               ref={nextRef}
-              className="bg-black p-3 rounded-full shadow-md hover:bg-gray-700 text-white transition"
+              className="bg-sky-800 p-3 rounded-full shadow-md hover:bg-gray-700 text-white transition"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaArrowRight />
-            </button>
+            </motion.button>
           </div>
         </div>
+        
         <div className="w-full">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -89,7 +114,13 @@ export default function EventCarousel() {
           >
             {events.map((event, index) => (
               <SwiperSlide key={index} className="flex justify-center">
-                <div className="max-w-[500px] bg-white shadow-lg rounded-lg overflow-hidden">
+                <motion.div
+                  className="max-w-[500px] bg-white shadow-lg rounded-lg overflow-hidden"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -100,16 +131,13 @@ export default function EventCarousel() {
                   <div className="p-6">
                     <h3 className="text-2xl font-semibold text-black">{event.title}</h3>
                     <p className="text-gray-600 mt-2">{event.description}</p>
-                    <div className="mt-4 flex justify-end">
-                      
-                    </div>
                   </div>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

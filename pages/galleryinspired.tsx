@@ -32,7 +32,7 @@ export default function Contact() {
           <div className="md:w-1/2 w-full text-white space-y-6">
             <h1 className="text-5xl font-bold uppercase leading-tight font-serif">
               Gallery section inspired by <br/> 
-              <span className="text-teal-300">Luxora Events™</span> 
+              <span className="text-white">Luxora Events™</span> 
             </h1>
             <div className="w-20 h-1 bg-white mx-auto"></div>
           </div>
@@ -53,6 +53,7 @@ export default function Contact() {
               ["/images/ga3.jpg", "col-span-2 h-72"],
               ["/images/ga2.jpg", "h-64"],
               ["/images/ga1.jpg", "row-span-2 h-96"],
+              ["/images/galla.jpg", "col-span-2 h-72"],
             ].map((image, index) => (
               <motion.div 
                 key={index} 

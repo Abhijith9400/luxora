@@ -4,6 +4,7 @@ import GallerySection from "@/components/GallerySection";
 import Navbar from "@/components/Navbar";
 import EventCarousel from "@/components/EventCarousel";
 import FeatureSection from "@/components/FeatureSection";
+import ServicesSection from "@/components/ServiceSection";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -102,41 +103,12 @@ export default function Home() {
         </main>
       </section>
     
-      <div className="relative z-10 px-4 md:px-20">
-        <h2 className="text-3xl md:text-7xl text-black mb-8 font-serif text-center">Our Services</h2>
-        <p className="text-lg text-gray-500 max-w-4xl mx-auto italic text-center">
-          We are a team of cross-disciplinary event experts from infrastructure, entertainment, sports, and hospitality industries!
-        </p>
-
-        <div className="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-4 px-4 md:px-0">
-          {[
-            { title: "Tenting & Structures", Image: "/images/ga1.jpg" },
-            { title: "Flooring & Seating", Image: "/images/ga2.jpg" },
-            { title: "3D Rendering, Branding, Wayfinding, & Printing", Image: "/images/ga3.jpg" },
-            { title: "VIP Hospitality & Ticketing Booths", Image: "/images/ga4.jpg" },
-            { title: "Furniture & Interior Buildouts", Image: "/images/we.jpg" },
-            { title: "Emergency Response / Semi-Permanent Solutions", Image: "/images/ga1.jpg" },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className="relative max-w-xs w-full mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
-            >
-              <Image
-                src={service.Image}
-                alt={service.title}
-                width={500}
-                height={300}
-                className="w-full h-56 object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-              <div className="absolute bottom-0 w-full bg-black bg-opacity-60 p-4 text-center">
-                <h3 className="text-lg font-bold text-white">{service.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
+      
+    <div className="event-sections py-16 bg-white">
+       
+        <ServicesSection />
+       
       </div>
-
       <div className="event-sections py-16 bg-white">
         <div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
         <TestimonialSection />
