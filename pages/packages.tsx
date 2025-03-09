@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import "../app/globals.css";
-import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import {  FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import React from "react";
-import { Engagement } from "next/font/google";
 import { motion } from "framer-motion";
 
 
@@ -206,8 +205,7 @@ const plans = [
   },
 ];
 
-function WeddingPricingSection() {
-  return (
+
     <section className="bg-white py-16 px-6 md:px-20 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 text-black">Wedding Packages</h2>
@@ -247,9 +245,7 @@ function WeddingPricingSection() {
         </div>
       </div>
     </section>
-  );
-}
-
+  
 
 
 

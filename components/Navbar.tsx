@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const Sidebar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <aside

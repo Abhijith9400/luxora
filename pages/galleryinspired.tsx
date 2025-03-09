@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 import "../app/globals.css"; // Adjust if Tailwind isn't applying
 import Image from "next/image";
-import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Contact() {
   return (
