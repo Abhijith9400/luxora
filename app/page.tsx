@@ -6,11 +6,7 @@ import EventCarousel from "@/components/EventCarousel";
 import FeatureSection from "@/components/FeatureSection";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
-import { Engagement } from "next/font/google";
-import "@fontsource/montserrat-alternates"; // Defaults to 400 weight
-import "@fontsource/montserrat-alternates/700.css"; // Optional: Specific weight
 
 
 export default function Home() {
@@ -37,23 +33,22 @@ export default function Home() {
 
           {/* Content Section */}
           <div className="relative z-10 w-full flex flex-col items-center sm:items-start sm:w-1/2 space-y-6 sm:pl-16 md:pl-20">
-  <motion.h1
-    className="text-3xl sm:text-5xl md:text-7xl  fontFamily: 'Montserrat Alternates'sans-serif leading-tight"
-    initial={{ opacity: 0, x: -100 }}
-    animate={{ opacity: 1, x: 20 }} // Moves text slightly to the right
-    transition={{ duration: 2, ease: "easeOut" }}
-  >
-    <span className="text-white"> Luxora Events,</span> <br />
-    Team You Can Trust™
-  </motion.h1>
+            <motion.h1
+              className="text-3xl sm:text-5xl md:text-7xl font-serif uppercase leading-tight"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 20 }} // Moves text slightly to the right
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+              <span className="text-white"> Luxora Events,</span> <br />
+              Team You Can Trust™
+            </motion.h1>
 
-  <Link href="/packages">
-    <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110 ml-4 sm:ml-6">
-      <FaArrowRight />
-    </button>
-  </Link>
-</div>
+            {/* Button */}
+             <button className="flex items-center justify-center w-12 h-12 bg-white text-teal-950 rounded-full transition-transform transform hover:scale-110 ml-4 sm:ml-6">
+            <FaArrowRight />
+           </button>
 
+          </div>
 
           {/* Right Text Section */}
           <motion.div
@@ -151,46 +146,46 @@ export default function Home() {
       <div id="contact">
         <div className="w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
         {/* Footer */}
-              <footer className="bg-gray-50 text-black py-10">
-                <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="flex flex-col space-y-3 text-center md:text-left">
-                    <Image src="/images/luxora.png" width={70} height={70} alt="Company Logo" className="mx-auto md:mx-0" />
-                    <p className="text-gray-600">
-                    United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
-                    </p>
-                    <p className="text-gray-600">+91-0000000000</p>
-                    <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
-                      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                    </div>
-                  </div>
-        
-                  <div className="flex flex-col space-y-2 text-center">
-                    <h3 className="text-lg font-bold">Quick Links</h3>
-                    {["Catalog", "Careers", "Contact Us", "Privacy Policy"].map((link) => (
-                      <a key={link} href="#" className="text-gray-800 hover:text-teal-600 transition-all">{link}</a>
-                    ))}
-                  </div>
-        
-                  <div className="flex flex-col space-y-3 text-center md:text-right">
-                    <h3 className="font-semibold">Sign up for News and Specials</h3>
-                    <div className="flex w-full md:w-auto">
-                      <input
-                        type="email"
-                        placeholder="Your Email"
-                        className="border px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-teal-500 w-full"
-                      />
-                      <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
-                        SIGN UP
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-center text-gray-500 text-sm mt-8">
-                  &copy; Select Event Group. All Rights Reserved.
-                </div>
-              </footer>
+                    <footer className="bg-gray-50 text-black py-10">
+                      <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="flex flex-col space-y-3 text-center md:text-left">
+                            <Image src="/images/luxora.png" width={70} height={70} alt="Company Logo" className="mx-auto md:mx-0" />
+                          <p className="text-gray-600">
+                          United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
+                          </p>
+                          <p className="text-gray-600">+91-0000000000</p>
+                          <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                          </div>
+                        </div>
+              
+                        <div className="flex flex-col space-y-2 text-center">
+                          <h3 className="text-lg font-bold">Quick Links</h3>
+                          {["Catalog", "Careers", "Contact Us", "Privacy Policy"].map((link) => (
+                            <a key={link} href="#" className="text-gray-800 hover:text-teal-600 transition-all">{link}</a>
+                          ))}
+                        </div>
+              
+                        <div className="flex flex-col space-y-3 text-center md:text-right">
+                          <h3 className="font-semibold">Sign up for News and Specials</h3>
+                          <div className="flex w-full md:w-auto">
+                            <input
+                              type="email"
+                              placeholder="Your Email"
+                              className="border px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-teal-500 w-full"
+                            />
+                            <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
+                              SIGN UP
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center text-gray-500 text-sm mt-8">
+                        &copy; Select Event Group. All Rights Reserved.
+                      </div>
+                    </footer>
       </div>
       </div>
   
