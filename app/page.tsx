@@ -36,7 +36,7 @@ export default function Home() {
           {/* Content Section */}
           <div className="relative z-10 w-full flex flex-col items-center sm:items-start sm:w-1/2 space-y-6 sm:pl-16 md:pl-20">
             <motion.h1
-              className="text-3xl sm:text-5xl md:text-7xl font-serif uppercase leading-tight"
+              className="text-3xl sm:text-5xl md:text-7xl font-merienda uppercase leading-tight"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 20 }} // Moves text slightly to the right
               transition={{ duration: 2, ease: "easeOut" }}

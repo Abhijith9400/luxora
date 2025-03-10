@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X, Menu } from "lucide-react";
-import Link from "next/link"; // Import Link from next/link
+import Link from "next/link";
 import Image from "next/image";
 
 const Sidebar = () => {
@@ -17,28 +17,28 @@ const Sidebar = () => {
         <Image src="/images/luxora.png" width={800} height={600} alt="logo" className="w-[90px] h-[60px] rounded-md"/>
       </div>
 
-      {/* Menu Button (Just for styling, no click needed) */}
+      {/* Menu Button */}
       <button className="p-2 rounded-md bg-black/50 hover:bg-red-600 transition">
         {menuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
       </button>
 
-      {/* Navigation Menu (Opens on Hover) */}
+      {/* Navigation Menu */}
       <nav
-        className={`absolute left-0 top-0 h-full w-60  bg-white shadow-lg transition-transform duration-300 ${
+        className={`absolute left-0 top-0 h-full w-60 bg-white shadow-lg transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Logo */}
         <div className="mb-6">
-          <Image src="/images/luxora.png"  width={500} height={300}alt="logo" className="w-90 h-90 rounded-md" />
+          <Image src="/images/luxora.png"  width={500} height={300} alt="logo" className="w-90 h-90 rounded-md" />
         </div>
 
        {/* Navigation Links */}
-       <ul className="flex flex-col text-lg font-semibold mt-20">
+       <ul className="flex flex-col text-lg font-semibold mt-20 font-[var(--font-merienda)]">
   {[
     { name: "Home", path: "/" },
     { name: "About us", path: "/about" },
-    { name: "Packages", path: "/packages", hasDropdown: true },
+    { name: "Packages  >", path: "/packages", hasDropdown: true },
     { name: "Contact", path: "/contact" },
     { name: "Gallery Inspired", path: "/galleryinspired" },
   ].map((menu) => (
@@ -53,8 +53,8 @@ const Sidebar = () => {
             {menu.name}
           </Link>
 
-          {/* Dropdown Menu (Opens on Hover) */}
-          <ul className="absolute right-0 mt-1 w-64 bg-white shadow-lg rounded-lg border z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+          {/* Dropdown Menu */}
+          <ul className="absolute left-full top-0 mt-1 w-64 bg-white shadow-lg rounded-lg border z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
             {[
               { name: "Wedding Package", path: "/packages/#wedding-packages" },
               { name: "Haldi Package", path: "/packages/#haldi-packages" },
