@@ -76,7 +76,7 @@ export default function Contact() {
       </section>
 
        {/* Footer */}
-            <footer className="bg-gray-50 text-black py-10">
+            <footer className="bg-gray-50 text-black py-10 font-merienda">
               <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col space-y-3 text-center md:text-left">
                     <Image src="/images/luxora.png" width={70} height={70} alt="Company Logo" className="mx-auto md:mx-0" />

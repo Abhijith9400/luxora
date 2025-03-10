@@ -13,7 +13,7 @@ import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-white text-white">
+    <div className="relative min-h-screen bg-white text-white ">
       {/* Navbar */}
       <Navbar />
 

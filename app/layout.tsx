@@ -1,21 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Merienda } from "next/font/google";
+import { Merienda } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const merienda = Merienda({
-  variable: "--font-merienda",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"], // Add all desired weights
+  variable: "--font-merienda",
 });
 
 export const metadata: Metadata = {
@@ -30,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merienda.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${merienda.className} antialiased`}>{children}</body>
     </html>
   );
 }

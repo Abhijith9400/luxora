@@ -10,6 +10,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["'Montserrat Alternates'", "sans-serif" ], // ✅ Add DM Sans
+        merienda: ['Merienda', 'cursive'],  // Define your font here
       },
     },
   },

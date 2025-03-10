@@ -34,7 +34,7 @@ const Sidebar = () => {
         </div>
 
        {/* Navigation Links */}
-       <ul className="flex flex-col text-lg font-semibold mt-20 font-[var(--font-merienda)]">
+       <ul className="flex flex-col text-lg font-semibold mt-20 font-merienda">
   {[
     { name: "Home", path: "/" },
     { name: "About us", path: "/about" },
