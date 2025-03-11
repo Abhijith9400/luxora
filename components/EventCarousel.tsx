@@ -58,7 +58,7 @@ export default function EventCarousel() {
 
   return (
     <motion.div
-      className="min-h-screen w-full bg-white flex flex-col justify-center items-center px-6 py-12"
+      className="min-h-screen w-full bg-white flex flex-col font-lato justify-center items-center px-6 py-12"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -91,7 +91,7 @@ export default function EventCarousel() {
             </motion.button>
             <motion.button
               ref={nextRef}
-              className="bg-sky-800 p-3 rounded-full shadow-md hover:bg-gray-700 text-white transition"
+              className="bg-sky-800 p-3 font-lato rounded-full shadow-md hover:bg-gray-700 text-white transition"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -129,8 +129,8 @@ export default function EventCarousel() {
                     className="w-full h-[280px] object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="text-2xl font-semibold text-black">{event.title}</h3>
-                    <p className="text-gray-600 mt-2">{event.description}</p>
+                    <h3 className="text-2xl font-semibold text-black font-playfair ">{event.title}</h3>
+                    <p className="text-gray-600 mt-2  font-lato">{event.description}</p>
                   </div>
                 </motion.div>
               </SwiperSlide>

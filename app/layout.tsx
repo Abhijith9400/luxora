@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Merienda } from "next/font/google";
+import { Merienda, Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 
 const merienda = Merienda({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-merienda",
+});
+
+const playfair = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
+const lato = Lato({
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin"],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${merienda.className} antialiased`}>{children}</body>
+      <body
+        className={`${merienda.variable} ${playfair.variable} ${lato.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

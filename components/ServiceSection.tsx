@@ -22,8 +22,8 @@ export default function ServicesSection() {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl md:text-7xl text-black mb-8 font-serif text-center">Our Services</h2>
-      <p className="text-lg text-amber-800 max-w-4xl mx-auto italic text-center">
+      <h2 className="text-3xl md:text-7xl text-black mb-8 font-playfair text-center">Our Services</h2>
+      <p className="text-lg text-amber-800 max-w-4xl mx-auto font-lato italic text-center">
         We are a team of cross-disciplinary event experts from infrastructure, entertainment, sports, and hospitality industries!
       </p>
 
@@ -46,7 +46,7 @@ export default function ServicesSection() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
             <div className="absolute bottom-0 w-full bg-black bg-opacity-60 p-4 text-center">
-              <h3 className="text-lg font-bold text-white">{service.title}</h3>
+              <h3 className="text-lg font-bold text-white font-playfair">{service.title}</h3>
             </div>
           </motion.div>
         ))}

@@ -3,8 +3,9 @@ import Navbar from "@/components/Navbar";
 import "../app/globals.css";
 import {  FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
+import React, { useState } from "react";
+
 
 
 interface PackagePlan {
@@ -19,67 +20,72 @@ interface PricingProps {
   description: string;
   plans: PackagePlan[];
 }
+const PricingSection: React.FC<PricingProps> = ({ plans }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-const PricingSection: React.FC<PricingProps> = ({ title, description, plans }) => (
-  <motion.section
-    className="py-16 bg-cover bg-white  px-6 md:px-20"
-    style={{ backgroundImage: "url('/images/hdbg.png')" }}
-    initial={{ opacity: 0, y: 50 }} // Start hidden and below
-    whileInView={{ opacity: 1, y: 0 }} // Animate into view
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    viewport={{ once: true }}
-  >
-    <div className="max-w-6xl bg-white mx-auto text-center">
-      <motion.h2
-        className="text-4xl font-bold mb-6 text-black"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
+  return (
+    <motion.section
+      className="py-16 bg-cover bg-white px-6 md:px-20"
+      style={{ backgroundImage: "url('/images/hdbg.png')" }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6 text-black font-playfair">Wedding Packages</h2>
+      </div>
+      <div 
+        className="max-w-6xl bg-white mx-auto text-center grid md:grid-cols-3 gap-10"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
-        {title}
-      </motion.h2>
-      
-      <motion.p
-        className="text-lg text-gray-700 bg-white   mb-10 max-w-2xl mx-auto"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-      >
-        {description}
-      </motion.p>
-
-      <div className=" bg-white grid md:grid-cols-3 gap-10">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
-            className="bg-white border rounded-xl p-8 shadow-lg transition-transform transform hover:scale-105"
+            className={`bg-white border rounded-xl shadow-lg transition-transform transform hover:scale-105 overflow-hidden`}
             initial={{ opacity: 0, scale: 0.9, y: 50 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ duration: 0.9, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            <Image
-              src={plan.image}
-              alt={plan.name}
-              width={120}
-              height={120}
-              className="mx-auto mb-4 rounded-full"
-            />
-            <h3 className="text-2xl font-semibold mb-3 text-black">{plan.name}</h3>
-            <p className="text-xl font-bold text-gray-800">{plan.price}</p>
-            <ul className="text-black mt-4 text-left space-y-2">
-              {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center">- {feature}</li>
-              ))}
-            </ul>
+            {/* Plan Image */}
+            <div className="relative w-full h-64">
+              <Image
+                src={plan.image}
+                alt={plan.name}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-xl"
+              />
+            </div>
+            
+            {/* Plan Name */}
+            <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
+            
+            {/* Plan Price */}
+            <p className="text-lg font-bold text-gray-800 font-playfair">{plan.price}</p>
+
+            {/* Plan Description - All Cards Show When Hovered */}
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={isHovered ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+              transition={{ duration: 0.4 }}
+              className="mt-4 text-left text-black p-4 overflow-hidden"
+            >
+              <ul className="mt-2 space-y-2">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-center font-lato">- {feature}</li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         ))}
       </div>
-    </div>
-  </motion.section>
-);
+    </motion.section>
+  );
+};
+
 
 // Pricing Section Component
 
@@ -95,70 +101,92 @@ interface HaldiProps {
   description: string;
   plans: Plan[];
 }
+const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => (
-  <motion.section
-    className="py-16 bg-cover bg-white px-8 md:px-20"
-    style={{ backgroundImage: "url('/images/hdbg.png')" }}
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    viewport={{ once: true }} >
-    <div className="max-w-4xl mx-auto text-center">
-      <motion.h2
-        className="text-4xl font-bold mb-6 text-black"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {title}
-      </motion.h2>
+  return (
+    <motion.section
+      className="py-16 bg-cover bg-white px-8 md:px-20"
+      style={{ backgroundImage: "url('/images/hdbg.png')" }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h2
+          className="text-4xl font-bold mb-6 text-black font-playfair"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          {title}
+        </motion.h2>
 
-      <motion.p
-        className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-      >
-        {description}
-      </motion.p>
+        <motion.p
+          className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          {description}
+        </motion.p>
 
-      <div className="grid md:grid-cols-2 gap-10 justify-center">
-        {plans.map((plan, index) => (
-          <motion.div
-            key={index}
-            className="bg-white border rounded-xl p-8 shadow-lg transition-transform transform hover:scale-105"
-            initial={{ opacity: 0, y: 100 }} // Cards move up when scrolled
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-          >
-            <Image
-              src={plan.image}
-              alt={plan.name}
-              width={120}
-              height={120}
-              className="mx-auto mb-4 rounded-full"
-            />
-            <h3 className="text-2xl font-semibold mb-3 text-black">{plan.name}</h3>
-            {plan.price && <p className="text-xl font-bold text-gray-800">{plan.price}</p>}
-            {plan.features ? (
-              <ul className="text-black mt-4 text-left space-y-2">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    - <span className="ml-2">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            ) : null}
-          </motion.div>
-        ))}
+        <div 
+          className="grid md:grid-cols-2 gap-10 justify-center"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {plans.map((plan, index) => (
+            <motion.div
+              key={index}
+              className={`bg-white border rounded-xl shadow-lg cursor-pointer transition-transform transform hover:scale-105 overflow-hidden`}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              {/* Plan Image */}
+              <div className="relative w-full h-64">
+                <Image
+                  src={plan.image}
+                  alt={plan.name}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-xl"
+                />
+              </div>
+
+              {/* Plan Name */}
+              <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
+              
+              {/* Plan Price */}
+              {plan.price && <p className="text-xl font-bold text-gray-800 font-playfair">{plan.price}</p>}
+
+              {/* Plan Description - All Cards Show When Hovered */}
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={isHovered ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+                transition={{ duration: 0.4 }}
+                className="mt-4 text-left text-black p-4 overflow-hidden font-lato"
+              >
+                {plan.features && (
+                  <ul className="space-y-2">
+                    {plan.features.map((features, i) => (
+                      <li key={i} className="flex items-center">- {features}</li>
+                    ))}
+                  </ul>
+                )}
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  </motion.section>
-);
+    </motion.section>
+  );
+};
 
 //  wedding Package Plans
 
@@ -209,9 +237,7 @@ const plans = [
     <section className="bg-white py-16 px-6 md:px-20 bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 text-black">Wedding Packages</h2>
-        <p className="text-lg text-gray-700 mb-10">
-          Choose the perfect wedding package for your special day.
-        </p>
+        
 
         {/* Package Cards with Animation */}
         <div className=" bg-white flex flex-wrap justify-center gap-10">
@@ -231,7 +257,7 @@ const plans = [
                 height={150}
                 className="mx-auto mb-4 rounded-lg"
               />
-              <h3 className="text-2xl font-semibold mb-3 text-black">{pkg.name}</h3>
+              <h3 className="text-2xl font-semibold mb-3 text-black font-playfair">{pkg.name}</h3>
               <p className="text-xl font-bold text-gray-800">{pkg.price}</p>
               <ul className="text-black mt-4 text-left space-y-2">
                 {pkg.features.map((feature, i) => (
@@ -385,7 +411,7 @@ export default function Contact() {
           className="absolute top-0 left-0 w-full h-full object-cover brightness-50"
         />
         <div className="relative z-10 w-full text-center px-6 md:px-20">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase text-white font-serif leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-playfair uppercase leading-tight">
             Our Packages
           </h1>
           <div className="w-16 h-1 bg-white my-4 mx-auto"></div>
@@ -437,10 +463,10 @@ export default function Contact() {
   />
 </div>
       {/* Footer */}
-      <footer className="bg-gray-50 text-black py-10 font-merienda">
+        <footer className="bg-gray-50 text-black py-10">
         <div className="container mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col space-y-3 text-center md:text-left">
-                    <Image src="/images/luxora.png" width={70} height={70} alt="Company Logo" className="mx-auto md:mx-0" />
+              <Image src="/images/luxora1.png" width={70} height={70} alt="Company Logo" className="mx-auto md:mx-0" />
             <p className="text-gray-600">
             United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
             </p>
@@ -451,14 +477,14 @@ export default function Contact() {
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
             </div>
           </div>
-
+     
           <div className="flex flex-col space-y-2 text-center">
             <h3 className="text-lg font-bold">Quick Links</h3>
             {["Catalog", "Careers", "Contact Us", "Privacy Policy"].map((link) => (
               <a key={link} href="#" className="text-gray-800 hover:text-teal-600 transition-all">{link}</a>
             ))}
           </div>
-
+     
           <div className="flex flex-col space-y-3 text-center md:text-right">
             <h3 className="font-semibold">Sign up for News and Specials</h3>
             <div className="flex w-full md:w-auto">

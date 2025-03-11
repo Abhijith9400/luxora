@@ -17,7 +17,7 @@ const GallerySection = () => {
     <section className="py-12 bg-white">
       {/* Title */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl md:text-5xl font-serif text-gray-900">Gallery</h2>
+        <h2 className="text-4xl md:text-5xl font-playfair text-gray-900">Gallery</h2>
       </div>
 
       {/* Responsive Grid Container */}

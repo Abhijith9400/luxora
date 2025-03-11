@@ -45,7 +45,7 @@ export default function TestimonialSection() {
   }, [currentIndex]); // Re-run effect when currentIndex changes
 
   return (
-    <div className="relative bg-white py-16 px-6 md:px-12 flex justify-center">
+    <div className="relative bg-white py-16 px-6 md:px-12 font-lato flex justify-center">
       {/* Background */}
       <div className="absolute inset-0 bg-[url('/images/testimonial-bg.jpg')] bg-cover bg-center opacity-10"></div>
 
@@ -62,7 +62,7 @@ export default function TestimonialSection() {
         </div>
 
         {/* Testimonial Content */}
-        <h2 className="text-xl md:text-2xl font-semibold text-gray-800 transition-opacity duration-500">
+        <h2 className="text-xl md:text-2xl font-semibold font-playfair text-gray-800 transition-opacity duration-500">
           {testimonials[currentIndex].text}
         </h2>
 

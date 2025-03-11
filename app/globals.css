@@ -10,6 +10,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-playfair: 'Playfair Display', serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-merienda: 'Merienda', cursive;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,4 +25,4 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Merienda', sans-serif;}
+}
