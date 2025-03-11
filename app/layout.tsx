@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Merienda, Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
+import LoadingWrapper from "@/components/LoadingWrapper";  // Corrected the import
 
 const merienda = Merienda({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -27,15 +28,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
         className={`${merienda.variable} ${playfair.variable} ${lato.variable} antialiased`}
       >
-        {children}
+        <LoadingWrapper>{children}</LoadingWrapper>
       </body>
     </html>
   );

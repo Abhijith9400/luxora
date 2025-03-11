@@ -25,7 +25,7 @@ const ContactPage = () => {
         <div className="relative z-10 flex flex-col lg:flex-row items-start justify-center space-x-0 lg:space-x-10 space-y-10 lg:space-y-0 px-5 py-20 w-full">
 
           {/* Contact Form Section */}
-          <div className="bg-white p-4 md:p-10 shadow-md rounded-md w-full max-w-[350px] md:max-w-[800px] h-auto m-5 md:ml-0 lg:ml-[200px]">
+          <div className="bg-white p-4 md:p-10 shadow-md rounded-md w-full max-w-[320px] md:max-w-[800px] h-auto m-5 md:ml-0 lg:ml-[200px]">
 
             <h2 className="text-2xl font-bold mb-6 text-black font-playfair text-center lg:text-left">CONTACT US</h2>
             <form className="flex flex-col space-y-6">
