@@ -38,13 +38,13 @@ export default function Home() {
           {/* Content Section */}
           <div className="relative z-10 w-full flex flex-col items-center sm:items-start sm:w-1/2 space-y-6 sm:pl-16 md:pl-20">
             <motion.h1
-              className="text-3xl sm:text-5xl md:text-7xl font-playfair uppercase leading-tight"
+              className="text-3xl sm:text-5xl md:text-6xl font-playfair uppercase leading-tight"
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 20 }}
               transition={{ duration: 2, ease: "easeOut" }}
             >
               <span className="text-white"> Luxora Events,</span> <br />
-              Team You Can Trust™
+              Crafting Unforgettable Moments
             </motion.h1>
 
             {/* Button */}
@@ -115,7 +115,7 @@ export default function Home() {
        <p className="text-gray-600">
        United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
        </p>
-       <p className="text-gray-600">+91-7306205146</p>
+       <p className="text-gray-600">+917306205146 | +918712365841 |+918919138745</p>
       
 <div className="flex justify-center md:justify-start space-x-4 text-xl">
   <a 

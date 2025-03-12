@@ -480,7 +480,7 @@ export default function Contact() {
             <p className="text-gray-600">
             United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
             </p>
-            <p className="text-gray-600">+91-7306205146</p>
+            <p className="text-gray-600">+917306205146 | +918712365841 |+918919138745</p>
            
 <div className="flex justify-center md:justify-start space-x-4 text-xl">
   <a 

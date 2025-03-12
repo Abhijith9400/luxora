@@ -62,8 +62,10 @@ export default function Contact() {
               We’re not just a provider.<br /> We’re a partner.
             </h1>
             <p className="text-lg text-gray-700 font-lato">
-              At Luxora Event Group, we go beyond being service providers of tenting, infrastructure, and rentals; 
-              we consider ourselves dedicated partners committed to ensuring the success and flawless execution of every event.
+            Welcome to Luxora, where luxury meets diversity! Based in the heart of Hyderabad, a city known for its rich heritage and cultural harmony, Luxora is dedicated to curating premium lifestyle experiences that cater to everyone.
+Our mission is to seamlessly blend tradition with modernity, offering thoughtfully crafted packages that elevate your everyday moments. Whether it's indulgent experiences, bespoke services, or customized solutions, Luxora is committed to delivering excellence, elegance, and convenience.
+At Luxora, we take pride in our inclusive approach, celebrating Hyderabad’s unique blend of cultures, traditions, and modern aspirations. We believe that luxury is not just about opulence but also about creating meaningful and memorable experiences for all.
+Join us in redefining luxury—the Luxora way!
             </p>
             <div className="w-full h-[1px] bg-black mt-14"></div>
           </motion.div>
@@ -121,14 +123,11 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-6xl font-playfair mb-4">Our Mission</h2>
+          <h2 className="text-4xl md:text-6xl font-playfair mb-4">Vision Statement</h2>
           <p className="text-lg leading-relaxed font-lato">
-            Our mission at <strong>Luxora Event Management</strong> is to provide professional event planning and management services across Kerala. 
-            We focus on delivering professional events tailored to the Malayali community and outsiders organizing events in Kerala.
+          "To be the leading provider of premium lifestyle experiences, seamlessly blending tradition and modernity while celebrating diverse cultures and beyond."
           </p>
-          <p className="text-lg leading-relaxed mt-4 font-lato">
-            Our mission also includes catering to rural areas, villages, and small towns, blending creativity and cultural relevance to create unforgettable experiences.
-          </p>
+         
           <div className="w-full h-[1px] bg-black mt-14"></div>
         </motion.div>
 
@@ -140,13 +139,10 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-playfair mb-4">A Recall of Achievements</h2>
+          <h2 className="text-4xl md:text-5xl font-playfair mb-4">Mission Statement</h2>
           <p className="text-lg leading-relaxed font-lato">
-            Our journey in the film and entertainment industry has been remarkable. From designing sets for acclaimed Malayalam films to celebrity weddings, we have been gaining recognition. 
-          </p>
-          <p className="text-lg leading-relaxed mt-4 font-lato">
-            Our focus is shifting towards destination weddings in Kerala, making it an ideal location for picturesque ceremonies.
-          </p>
+          "At Luxora, we are committed to delivering exceptional lifestyle solutions that cater to the diverse needs of our community. Rooted in Hyderabad’s vibrant cultural heritage, we offer premium packages that reflect inclusivity, luxury, and innovation. Our goal is to enhance everyday experiences by curating high-quality services and products that inspire elegance, comfort, and convenience for all."          </p>
+         
           <div className="w-full h-[1px] bg-black mt-14"></div>
         </motion.div>
       </motion.section>
@@ -159,7 +155,7 @@ export default function Contact() {
              <p className="text-gray-600">
              United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
              </p>
-             <p className="text-gray-600">+91-7306205146</p>
+             <p className="text-gray-600">+917306205146 | +918712365841 |+918919138745</p>
              
 <div className="flex justify-center md:justify-start space-x-4 text-xl">
   <a 
