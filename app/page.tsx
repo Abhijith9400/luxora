@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       <section className="w-full py-16 sm:py-24 text-center relative bg-cyan-100 bg-cover bg-center bg-no-repeat px-4 sm:px-12 lg:px-20" style={{ backgroundImage: "url('/images/hdbg.png')" }}>
-        <h2 className="relative text-2xl sm:text-5xl md:text-7xl  text-black leading-tight mb-6 text-left sm:left-10 md:left-20 mt-6 sm:mt-12">
+        <h2 className="relative text-2xl sm:text-5xl md:text-7xl  text-black leading-tight mb-6 text-left sm:left-10 md:left-20 mt-6 sm:mt-12 font-playfair">
           Transforming events, redefining excellence, setting new ideas
         </h2>
         <div className="w-[90%] sm:w-[80%] h-[1px] bg-black mx-auto mt-8"></div>
