@@ -125,7 +125,7 @@ Join us in redefining luxury—the Luxora way!
         >
           <h2 className="text-4xl md:text-6xl font-playfair mb-4">Vision Statement</h2>
           <p className="text-lg leading-relaxed font-lato">
-          &quot To be the leading provider of premium lifestyle experiences, seamlessly blending tradition and modernity while celebrating diverse cultures and beyond.&quot
+           To be the leading provider of premium lifestyle experiences, seamlessly blending tradition and modernity while celebrating diverse cultures and beyond.
           </p>
          
           <div className="w-full h-[1px] bg-black mt-14"></div>
@@ -141,7 +141,7 @@ Join us in redefining luxury—the Luxora way!
         >
           <h2 className="text-4xl md:text-5xl font-playfair mb-4">Mission Statement</h2>
           <p className="text-lg leading-relaxed font-lato">
-          &quot At Luxora, we are committed to delivering exceptional lifestyle solutions that cater to the diverse needs of our community. Rooted in Hyderabads vibrant cultural heritage, we offer premium packages that reflect inclusivity, luxury, and innovation. Our goal is to enhance everyday experiences by curating high-quality services and products that inspire elegance, comfort, and convenience for all.&quot         </p>
+           At Luxora, we are committed to delivering exceptional lifestyle solutions that cater to the diverse needs of our community. Rooted in Hyderabads vibrant cultural heritage, we offer premium packages that reflect inclusivity, luxury, and innovation. Our goal is to enhance everyday experiences by curating high-quality services and products that inspire elegance, comfort, and convenience for all.        </p>
          
           <div className="w-full h-[1px] bg-black mt-14"></div>
         </motion.div>
