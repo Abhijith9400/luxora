@@ -37,7 +37,7 @@ const handler = async (req, res) => { // No TypeScript-specific types here
 
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending email:');
     res.status(500).json({ message: 'Something went wrong. Try again later.' });
   }
 };
