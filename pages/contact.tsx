@@ -34,6 +34,11 @@ const ContactPage = () => {
                 placeholder="Enter your Name" 
                 className="border-b border-sky-400 p-2 focus:outline-none text-black" 
               />
+               <input 
+                type="number" 
+                placeholder="Enter your phone number" 
+                className="border-b border-sky-400 p-2 focus:outline-none text-black" 
+              />
               <input 
                 type="email" 
                 placeholder="Enter a valid email address" 
