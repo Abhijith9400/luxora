@@ -63,8 +63,8 @@ export default function Contact() {
             </h1>
             <p className="text-lg text-gray-700 font-lato">
             Welcome to Luxora, where luxury meets diversity! Based in the heart of Hyderabad, a city known for its rich heritage and cultural harmony, Luxora is dedicated to curating premium lifestyle experiences that cater to everyone.
-Our mission is to seamlessly blend tradition with modernity, offering thoughtfully crafted packages that elevate your everyday moments. Whether it's indulgent experiences, bespoke services, or customized solutions, Luxora is committed to delivering excellence, elegance, and convenience.
-At Luxora, we take pride in our inclusive approach, celebrating Hyderabad’s unique blend of cultures, traditions, and modern aspirations. We believe that luxury is not just about opulence but also about creating meaningful and memorable experiences for all.
+Our mission is to seamlessly blend tradition with modernity, offering thoughtfully crafted packages that elevate your everyday moments. Whether its indulgent experiences, bespoke services, or customized solutions, Luxora is committed to delivering excellence, elegance, and convenience.
+At Luxora, we take pride in our inclusive approach, celebrating Hyderabads unique blend of cultures, traditions, and modern aspirations. We believe that luxury is not just about opulence but also about creating meaningful and memorable experiences for all.
 Join us in redefining luxury—the Luxora way!
             </p>
             <div className="w-full h-[1px] bg-black mt-14"></div>
@@ -141,7 +141,7 @@ Join us in redefining luxury—the Luxora way!
         >
           <h2 className="text-4xl md:text-5xl font-playfair mb-4">Mission Statement</h2>
           <p className="text-lg leading-relaxed font-lato">
-          "At Luxora, we are committed to delivering exceptional lifestyle solutions that cater to the diverse needs of our community. Rooted in Hyderabad’s vibrant cultural heritage, we offer premium packages that reflect inclusivity, luxury, and innovation. Our goal is to enhance everyday experiences by curating high-quality services and products that inspire elegance, comfort, and convenience for all."          </p>
+          "At Luxora, we are committed to delivering exceptional lifestyle solutions that cater to the diverse needs of our community. Rooted in Hyderabads vibrant cultural heritage, we offer premium packages that reflect inclusivity, luxury, and innovation. Our goal is to enhance everyday experiences by curating high-quality services and products that inspire elegance, comfort, and convenience for all."          </p>
          
           <div className="w-full h-[1px] bg-black mt-14"></div>
         </motion.div>
