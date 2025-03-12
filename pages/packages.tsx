@@ -45,7 +45,7 @@ const PricingSection: React.FC<PricingProps> = ({ plans }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {plans.map((plan, index) => (
-          <Link key={index} href="/contact" passHref>
+          <Link key={index} href="/contacts" passHref>
             <motion.div
               className={`bg-white border rounded-xl shadow-lg transition-transform transform hover:scale-105 overflow-hidden cursor-pointer`}
               initial={{ opacity: 0, scale: 0.9, y: 50 }}
@@ -147,7 +147,7 @@ const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           {plans.map((plan, index) => (
-             <Link key={index} href="/contact" passHref>
+             <Link key={index} href="/contacts" passHref>
             <motion.div
               key={index}
               className={`bg-white border rounded-xl shadow-lg cursor-pointer transition-transform transform hover:scale-105 overflow-hidden`}

@@ -46,7 +46,7 @@ const Sidebar = () => {
            { name: "Home", path: "/" },
            { name: "About us", path: "/about" },
            { name: "Packages  ⫸", path: "/packages", hasDropdown: true },
-           { name: "Contact", path: "/contact" },
+           { name: "Contact", path: "/contacts" },
            { name: "Gallery Inspired", path: "/galleryinspired" },
          ].map((menu) => (
            <li key={menu.name} className="relative group">

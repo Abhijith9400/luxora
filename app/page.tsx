@@ -16,7 +16,9 @@ export default function Home() {
     <div className=" ">
       {/* Navbar */}
       <Navbar />
-
+      
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+     
       {/* Hero Section */}
       <main className="relative bg-white">
         <section className="relative w-full h-screen bg-black flex flex-col items-center justify-center text-center sm:text-left sm:flex-row sm:justify-between px-6 sm:px-12 lg:px-16">
