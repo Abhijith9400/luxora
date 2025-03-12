@@ -71,7 +71,7 @@ export default function Home() {
         </section>
       </main>
 
-      <section className="relative flex flex-col items-center justify-center py-16 px-4 sm:px-12 lg:px-16 bg-cyan-100 bg-cover bg-center text-center" style={{ backgroundImage: "url('/images/hdbg.png')" }}>
+      <section className="relative flex flex-col items-center justify-center py-16 px-4 sm:px-12 lg:px-16 bg-white bg-cover bg-center text-center" style={{ backgroundImage: "url('/images/hdbg.png')" }}>
         <h2 className="text-2xl sm:text-4xl md:text-6xl font-playfair text-black leading-tight mb-6">
           Elevating experiences, setting new standards.
         </h2>
