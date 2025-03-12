@@ -115,7 +115,7 @@ export default function Home() {
        <p className="text-gray-600">
        United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
        </p>
-       <p className="text-gray-600">+91-0000000000</p>
+       <p className="text-gray-600">+91-7306205146</p>
       
 <div className="flex justify-center md:justify-start space-x-4 text-xl">
   <a 

@@ -74,7 +74,7 @@ const ContactPage = () => {
                 <FaPhone className="text-xl text-orange-400 mr-2" />
                 <span className="font-bold text-lg">CALL US</span>
               </div>
-              <p className="text-gray-300">1 (234) 567-891, 1 (234) 987-654</p>
+              <p className="text-gray-300">+91-7306205146</p>
             </div>
 
             <div>
