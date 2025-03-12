@@ -68,7 +68,7 @@ const PricingSection: React.FC<PricingProps> = ({ plans }) => {
               <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
               
               {/* Plan Price */}
-              <p className="text-lg font-bold text-gray-800 font-playfair">{plan.price}</p>
+              <p className="text-lg font-bold text-gray-800 font-lato">{plan.price}</p>
 
               {/* Plan Description - All Cards Show When Hovered */}
               <motion.div
@@ -171,7 +171,7 @@ const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => {
               <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
               
               {/* Plan Price */}
-              {plan.price && <p className="text-xl font-bold text-gray-800 font-playfair">{plan.price}</p>}
+              {plan.price && <p className="text-xl font-bold text-gray-800 font-lato">{plan.price}</p>}
 
               {/* Plan Description - All Cards Show When Hovered */}
               <motion.div
