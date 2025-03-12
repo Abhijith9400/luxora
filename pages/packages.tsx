@@ -5,6 +5,8 @@ import {  FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import Link from 'next/link';
+
 
 
 
@@ -20,6 +22,8 @@ interface PricingProps {
   description: string;
   plans: PackagePlan[];
 }
+
+
 const PricingSection: React.FC<PricingProps> = ({ plans }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -41,50 +45,53 @@ const PricingSection: React.FC<PricingProps> = ({ plans }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {plans.map((plan, index) => (
-          <motion.div
-            key={index}
-            className={`bg-white border rounded-xl shadow-lg transition-transform transform hover:scale-105 overflow-hidden`}
-            initial={{ opacity: 0, scale: 0.9, y: 50 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: index * 0.2 }}
-            viewport={{ once: true }}
-          >
-            {/* Plan Image */}
-            <div className="relative w-full h-64">
-              <Image
-                src={plan.image}
-                alt={plan.name}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-xl"
-              />
-            </div>
-            
-            {/* Plan Name */}
-            <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
-            
-            {/* Plan Price */}
-            <p className="text-lg font-bold text-gray-800 font-playfair">{plan.price}</p>
-
-            {/* Plan Description - All Cards Show When Hovered */}
+          <Link key={index} href="/contact" passHref>
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={isHovered ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
-              transition={{ duration: 0.4 }}
-              className="mt-4 text-left text-black p-4 overflow-hidden"
+              className={`bg-white border rounded-xl shadow-lg transition-transform transform hover:scale-105 overflow-hidden cursor-pointer`}
+              initial={{ opacity: 0, scale: 0.9, y: 50 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
-              <ul className="mt-2 space-y-2">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center font-lato">- {feature}</li>
-                ))}
-              </ul>
+              {/* Plan Image */}
+              <div className="relative w-full h-64">
+                <Image
+                  src={plan.image}
+                  alt={plan.name}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-xl"
+                />
+              </div>
+              
+              {/* Plan Name */}
+              <h3 className="text-2xl font-semibold mt-4 text-black font-playfair">{plan.name}</h3>
+              
+              {/* Plan Price */}
+              <p className="text-lg font-bold text-gray-800 font-playfair">{plan.price}</p>
+
+              {/* Plan Description - All Cards Show When Hovered */}
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={isHovered ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+                transition={{ duration: 0.4 }}
+                className="mt-4 text-left text-black p-4 overflow-hidden"
+              >
+                <ul className="mt-2 space-y-2">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-center font-lato">- {feature}</li>
+                  ))}
+                </ul>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </Link>
         ))}
       </div>
     </motion.section>
   );
 };
+
+
 
 
 // Pricing Section Component
@@ -140,6 +147,7 @@ const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           {plans.map((plan, index) => (
+             <Link key={index} href="/contact" passHref>
             <motion.div
               key={index}
               className={`bg-white border rounded-xl shadow-lg cursor-pointer transition-transform transform hover:scale-105 overflow-hidden`}
@@ -175,12 +183,13 @@ const Haldi: React.FC<HaldiProps> = ({ title, description, plans }) => {
                 {plan.features && (
                   <ul className="space-y-2">
                     {plan.features.map((features, i) => (
-                      <li key={i} className="flex items-center">- {features}</li>
+                      <li key={i} className="flex items-centerfont-lato ">- {features}</li>
                     ))}
                   </ul>
                 )}
               </motion.div>
             </motion.div>
+            </Link>
           ))}
         </div>
       </div>
@@ -262,7 +271,7 @@ const plans = [
               <ul className="text-black mt-4 text-left space-y-2">
                 {pkg.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
-                    ✅ <span className="ml-2">{feature}</span>
+                    ✅ <span className="ml-2 font-lato">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -403,15 +412,16 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/annual.webp"
-          alt="Event Background"
-          fill
-          priority
-          className="absolute top-0 left-0 w-full h-full object-cover brightness-50"
-        />
+      <video
+  src="/videos/package1.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="absolute top-0 left-0 w-full h-full object-cover z-0"
+></video>
         <div className="relative z-10 w-full text-center px-6 md:px-20">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-playfair uppercase leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl  text-white font-playfair uppercase leading-tight">
             Our Packages
           </h1>
           <div className="w-16 h-1 bg-white my-4 mx-auto"></div>
@@ -471,11 +481,40 @@ export default function Contact() {
             United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
             </p>
             <p className="text-gray-600">+91-0000000000</p>
-            <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            </div>
+           
+<div className="flex justify-center md:justify-start space-x-4 text-xl">
+  <a 
+    href="https://facebook.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800 transition-colors"
+  >
+    <FaFacebook />
+  </a>
+  
+  <a 
+    href="https://instagram.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-pink-500 hover:text-pink-700 transition-colors"
+    style={{
+      background: "linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    <FaInstagram />
+  </a>
+  
+  <a 
+    href="https://twitter.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:text-sky-700 transition-colors"
+  >
+    <FaTwitter />
+  </a>
+</div>
           </div>
      
           <div className="flex flex-col space-y-2 text-center">
@@ -493,15 +532,23 @@ export default function Contact() {
                 placeholder="Your Email"
                 className="border px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-teal-500 w-full"
               />
-              <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
+              <button className="bg-sky-700 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
                 SIGN UP
               </button>
             </div>
           </div>
         </div>
         <div className="text-center text-gray-500 text-sm mt-8">
-          &copy; Select Event Group. All Rights Reserved.
-        </div>
+  &copy; 2025 Luxora. All Rights Reserved. Designed By{" "}
+  <a 
+    href="https://webgeon.com" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-sky-800 hover:underline"
+  >
+    Webgeon
+  </a>
+</div>
       </footer>
     </>
   );

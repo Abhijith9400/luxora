@@ -28,8 +28,8 @@ const LoadingSpinner = () => {
 
       {/* Spinner Animation */}
       <div className="relative flex items-center justify-center">
-        <div className="animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-red-600"></div>
-        <div className="absolute animate-pulse rounded-full h-16 w-16 bg-red-600"></div>
+        <div className="animate-spin rounded-full h-24 w-24 border-t-4 border-b-4 border-white"></div>
+        <div className="absolute animate-pulse rounded-full h-16 w-16 bg-sky-800"></div>
       </div>
 
       {/* Loading Text */}

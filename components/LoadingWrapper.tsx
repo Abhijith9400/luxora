@@ -10,7 +10,7 @@ const LoadingWrapper = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 2000); // Simulate loading for 1.5 seconds
+    const timer = setTimeout(() => setLoading(false), 1000); // Simulate loading for 1.5 seconds
     return () => clearTimeout(timer);
   }, [pathname]);
 

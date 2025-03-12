@@ -11,7 +11,8 @@ export default {
       fontFamily: {
         merienda: ['var(--font-merienda)', 'cursive'],
         playfair: ['var(--font-playfair)', 'serif'],
-        lato: ['var(--font-lato)', 'sans-serif'],    },
+        lato: ['var(--font-lato)', 'sans-serif'],   
+        },
   },
   plugins: [],
   }}

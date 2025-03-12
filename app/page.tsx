@@ -116,11 +116,40 @@ export default function Home() {
        United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
        </p>
        <p className="text-gray-600">+91-0000000000</p>
-       <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
-         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-       </div>
+      
+<div className="flex justify-center md:justify-start space-x-4 text-xl">
+  <a 
+    href="https://facebook.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800 transition-colors"
+  >
+    <FaFacebook />
+  </a>
+  
+  <a 
+    href="https://instagram.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-pink-500 hover:text-pink-700 transition-colors"
+    style={{
+      background: "linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    <FaInstagram />
+  </a>
+  
+  <a 
+    href="https://twitter.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:text-sky-700 transition-colors"
+  >
+    <FaTwitter />
+  </a>
+</div>
      </div>
 
      <div className="flex flex-col space-y-2 text-center">
@@ -145,8 +174,16 @@ export default function Home() {
      </div>
    </div>
    <div className="text-center text-gray-500 text-sm mt-8">
-     &copy; Select Event Group. All Rights Reserved.
-   </div>
+  &copy; 2025 Luxora. All Rights Reserved. Designed By{" "}
+  <a 
+    href="https://webgeon.com" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-sky-800 hover:underline"
+  >
+    Webgeon
+  </a>
+</div>
  </footer>
 </div>
 

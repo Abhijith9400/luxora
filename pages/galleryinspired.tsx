@@ -59,12 +59,10 @@ export default function Contact() {
   ["/images/a1.jpg", "h-48"],
   ["/images/a2.jpg", "col-span-2 h-80"],
   ["/images/a3.jpg", "row-span-2 h-96"],
-  ["/images/a4.jpg", "h-56"],
+  ["/images/a4.jpg", " row-span-2 h-50"],
   ["/images/a5.jpg", "col-span-2 h-64"],
-  ["/images/a6.jpg", "row-span-2 h-92"],
-  ["/images/a7.jpg", "h-60"],
-  ["/images/a8.jpg", "col-span-2 h-95"],
-  ["/images/a9.jpg", "row-span-2 h-90"]
+  ["/images/a6.jpg", "row-span-2 h-80"],
+  ["/images/a7.jpg", "row-span-2 h-60"],
 ].map((image, index) => (
 
               <motion.div 
@@ -96,11 +94,40 @@ export default function Contact() {
               United Arcade, Ground Floor 42 <br/>Hyderabad, Telangana India <br/> 500048
               </p>
               <p className="text-gray-600">+91-0000000000</p>
-              <div className="flex justify-center md:justify-start space-x-4 text-blue-600 text-xl">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-              </div>
+             
+<div className="flex justify-center md:justify-start space-x-4 text-xl">
+  <a 
+    href="https://facebook.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800 transition-colors"
+  >
+    <FaFacebook />
+  </a>
+  
+  <a 
+    href="https://instagram.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-pink-500 hover:text-pink-700 transition-colors"
+    style={{
+      background: "linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    }}
+  >
+    <FaInstagram />
+  </a>
+  
+  <a 
+    href="https://twitter.com" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="text-sky-500 hover:text-sky-700 transition-colors"
+  >
+    <FaTwitter />
+  </a>
+</div>
             </div>
        
             <div className="flex flex-col space-y-2 text-center">
@@ -118,15 +145,23 @@ export default function Contact() {
                   placeholder="Your Email"
                   className="border px-4 py-2 rounded-l-md focus:outline-none focus:ring focus:border-teal-500 w-full"
                 />
-                <button className="bg-cyan-700 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
+                <button className="bg-sky-800 text-white px-6 py-2 rounded-r-md hover:bg-cyan-800">
                   SIGN UP
                 </button>
               </div>
             </div>
           </div>
           <div className="text-center text-gray-500 text-sm mt-8">
-            &copy; Select Event Group. All Rights Reserved.
-          </div>
+  &copy; 2025 Luxora. All Rights Reserved. Designed By{" "}
+  <a 
+    href="https://webgeon.com" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-sky-800 hover:underline"
+  >
+    Webgeon
+  </a>
+</div>
         </footer>
       
     </div>
