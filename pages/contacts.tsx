@@ -37,7 +37,8 @@ const ContactPage = () => {
       } else {
         setStatus(result.message || 'Something went wrong.');
       }
-    } catch (error) {
+    } catch (error) 
+    {console.log(error)
       setStatus('Something went wrong. Please try again later.');
     }
   };
