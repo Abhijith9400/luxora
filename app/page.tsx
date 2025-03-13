@@ -17,7 +17,7 @@ export default function Home() {
       {/* Navbar */}
       <Navbar />
       
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
+      
      
       {/* Hero Section */}
       <main className="relative bg-white">
