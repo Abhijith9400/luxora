@@ -1,5 +1,7 @@
 import nodemailer from 'nodemailer';
 
+
+
 const handler = async (req, res) => { // No TypeScript-specific types here
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
@@ -34,7 +36,7 @@ const handler = async (req, res) => { // No TypeScript-specific types here
     };
 
     await transporter.sendMail(mailOptions);
-
+    
     res.status(200).json({ message: 'Email sent successfully!' });
   } catch {
     console('Error sending email:');
