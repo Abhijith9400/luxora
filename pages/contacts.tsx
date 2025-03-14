@@ -113,17 +113,12 @@ const ContactPage = () => {
                 required
               ></textarea>
                
-            
-
-               <div className="flex justify-end">
-  <button 
-    type="submit"
-    className="mt-2 bg-black text-white py-1 px-4 rounded-md hover:bg-gray-800 transition text-sm"
-  >
-    SUBMIT
-  </button>
-</div>
-
+              <button 
+                type="submit"
+                className="mt-2 bg-black text-white py-1 px-4 rounded-md hover:bg-gray-800 transition text-sm self-start"
+              >
+                SUBMIT
+              </button>
               {status && <p>{status}</p>}
             </form>
           </div>
